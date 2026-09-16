@@ -98,36 +98,57 @@ Sparklines, history, per-zone breakdown, camera feed, settings, login, any secon
 > **EN:** *"The agents are individually reasonable. The problem is that two of them are requesting the same physical resource for different local goals."*
 > **AR:** *«كل وكيل منطقي بمفرده. المشكلة أن وكيلين يطلبان نفس المورد المادي لهدفين مختلفين.»*
 
-### Hero layout — two large requests converging on one shared resource
+### Hero layout — ONE TANK, TWO AGENT TARGET LINES
 
-The conflict must be legible from several metres. Not a label — a **collision**.
+The conflict must be legible from several metres. Not a label — **two agents pointing at different levels on the same vessel.**
 
 ```
-   ReservoirAgent                                    ECControllerAgent
-   وكيل الخزان                                       وكيل التحكم في EC
+  ReservoirAgent          ONE SHARED RESOURCE · TWO AGENTS        ECControllerAgent
+  REACTIVE AGENT · L1.1   مورد واحد مشترك · وكيلان                REACTIVE AGENT · L1.1
+  وكيل الخزان                                                     وكيل التحكم في EC
+  ┌────────────────┐   ╌╌╌╌╌╌╌╌╌╌╌╌  95 % FLOAT CUTOFF  ┌────────────────┐
+  │ P2 · CONFLICT  │   ╌╌╌╌┏━━━━━━┓╌  90 % ← ReservoirAgent│ P2 · CONFLICT  │
+  │                │   ╌╌╌╌┃ band ┃╌  83 % ← ECControllerAgent               │
+  │ Level 62 % is  │       ┃70–90%┃                      │ EC 2.41 is     │
+  │ below target   │       ┗━━━━━━┛                      │ above 1.80     │
+  │                │   ────┃▓▓▓▓▓▓┃──  62 % · NOW · 62.0 L│                │
+  │ REQUEST REFILL │       ┃▓▓▓▓▓▓┃     EC 2.41 mS/cm     │REQUEST DILUTION│
+  │    + 28 L      │       ┗━━━━━━┛                      │   ≈ + 21 L     │
+  │ owns actuator  │    RESERVOIR · 100 L · الخزان        │ does NOT own   │
+  └────────────────┘                                      └────────────────┘
 
-   Level 62 % is below                              EC 2.41 is above
-   operating target                                 the 1.80 target
-   الخزان منخفض                                      التركيز مرتفع
-
-   ┌──────────────────┐                        ┌──────────────────┐
-   │  REQUEST REFILL  │                        │ REQUEST DILUTION │
-   │   طلب تعبئة       │                        │   طلب تخفيف       │
-   │     + 28 L       │                        │    ≈ + 21 L      │
-   └────────┬─────────┘                        └────────┬─────────┘
-            │                                           │
-            └──────────────►  ⚠  ◄──────────────────────┘
-            ⚠ SHARED-RESOURCE CONFLICT / تعارض على مورد مشترك
-                  ┌────────────────────────────┐
-                  │   SHARED RESOURCE          │
-                  │   RESERVOIR · 100 L        │
-                  │   المورد المشترك — الخزان   │
-                  └────────────────────────────┘
+  ⚠ SHARED-RESOURCE CONFLICT · BOTH P2 · PRIORITY ALONE CANNOT SEPARATE THEM
+                    تعارض على مورد مشترك
 ```
 
-**Both requests are P2 Crop Health.** Priority alone does not separate them — and that is the point. Independent control logic has no mechanism to notice they act on the same resource.
+**Why this layout beats a pair of converging arrows:** a judge sees one vessel and two different target lines on it. There is nothing to decode. The risk of the picture is that it reads as *plumbing* rather than as multi-agent AI — so the agent framing around it does the work: layer labels above each name, the target lines labelled with the **agent names** rather than the volumes, and the P2 chips that make the tie visible.
 
-**Actuator ownership (get this right — a judge will check):** ECController **requests dilution equivalent to ≈ +21 L fresh water**. It does not operate the solenoid. **ReservoirAgent owns the refill action.**
+### Tank geometry — exact values, so the build isn't reverse-engineered from the picture
+
+SVG `viewBox="0 0 480 500"`. Tank rect `x=40 y=30 w=140 h=420`, so 100 % sits at `y=30` and 0 % at `y=450`.
+
+```
+y(L) = 450 − 4.2 × L        (L = level in %)
+```
+
+| Level | Meaning | y | Element |
+|---|---|---|---|
+| 95 % | hardware float cutoff | **51** | red dashed line, full width, label right |
+| 90 % | ReservoirAgent target | **72** | amber dashed line + `90 % ← ReservoirAgent` |
+| 83 % | ECControllerAgent target | **101** | amber dashed line + `83 % ← ECControllerAgent` |
+| 70 % | bottom of target band | **156** | band edge (no line of its own) |
+| 62 % | current level | **190** | solid white line + `62 % · NOW · 62.0 L` |
+| 0 % | tank floor | **450** | — |
+
+Derived rectangles:
+
+- **Target band** (70–90 %): `y=72`, `height = y(70) − y(90) = 156 − 72 = 84`, fill `rgba(79,176,138,0.10)`
+- **Water fill** (0–62 %): `y=190`, `height = 450 − 190 = 260`, fill `rgba(79,176,138,0.20)`
+- Level lines run `x1=28 → x2=192` (slightly proud of the tank on both sides); labels start at `x=200`
+
+**Both requests are P2 Crop Health.** Priority alone does not separate them — and that is the point. Independent control logic has no mechanism to notice they act on the same resource. The banner says so in words, because the tie is the argument.
+
+**Actuator ownership (get this right — a judge will check):** ECController **requests dilution equivalent to ≈ +21 L fresh water** — its card reads *"requests the volume · does not own the actuator"*. **ReservoirAgent owns the refill actuator** — its card reads *"fill to 90 % · owns the refill actuator"*.
 
 ### Supporting agents — a smaller row beneath the hero conflict
 
@@ -162,7 +183,7 @@ Qualitative only, and labelled: `Confidence (simulated): High / Medium / Provisi
 `ORCHESTRATOR — RESOLVE → / المنسّق — احسم التعارض` advances to screen 3.
 
 ### Do not build
-Clickable cards, expandable detail, message logs, live updates, animation beyond the conflict marker.
+Clickable cards, expandable detail, message logs, live updates, animated fill, a second tank.
 
 ---
 
@@ -290,7 +311,7 @@ Orchestrator output adds: `arbitration_rule`, `resolution_method`, `merged[]`, `
 
 **Sprint 1 — 9:05 to 9:20**
 1. Data file: six agent objects + Orchestrator output, bilingual. Layan verifies every number and every Arabic line.
-2. Screen 2 hero conflict: two request blocks, shared-resource block, incompatibility marker.
+2. Screen 2 hero: the tank SVG with its five level lines, flanked by the two agent cards.
 
 *Exit check: is the conflict readable from across the room? If no, fix before continuing.*
 
@@ -315,6 +336,8 @@ Orchestrator output adds: `arbitration_rule`, `resolution_method`, `merged[]`, `
 - [ ] pHController does **not** dose at pH 6.42 — status is OBSERVE / مراقبة
 - [ ] ECController **requests dilution**; ReservoirAgent **owns the refill action**
 - [ ] Reservoir +28 L vs EC ≈ +21 L is the single main visible conflict
+- [ ] Tank level lines match `y(L) = 450 − 4.2 × L`; the 95 % cutoff sits above both target lines
+- [ ] Target lines are labelled with **agent names**, not just volumes
 - [ ] Float/overflow cutoff is **95 %**, not 100 %, wherever shown
 - [ ] Dilution is labelled an **approximation** (C₁V₁ ≈ C₂V₂), not nutrient-mass conservation
 - [ ] **No "measured 4 ms"** claim anywhere — only "capstone design target < 10 ms"

@@ -169,7 +169,7 @@ The interface is **bilingual Arabic + English on all three screens.** The divisi
 **Visual:**
 - Dark operational theme — reads at distance during a معرض walk-through
 - Screen 1: four large tiles, state chips visible in colour **and** words
-- Screen 2: the hero conflict rendered as **two large requests converging on one shared resource**, with an unmistakable incompatibility marker between them; the four supporting agents in a smaller row beneath
+- Screen 2: the hero conflict rendered as **one reservoir drawn to scale with two agent target lines on it** — Reservoir's 90 %, EC's 83 %, the 95 % float cutoff above both — flanked by the two agent cards; the four supporting agents in a smaller row beneath
 - Screen 3: **Decision → Why → Execution.** Technical trace lives in a small optional area, never at the visual centre
 - The decision line is the largest type in the whole prototype
 
