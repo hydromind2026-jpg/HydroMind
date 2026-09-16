@@ -1,0 +1,15 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Screen 1 — Farm Status", "x": 0, "y": 0, "w": 1440, "h": 1000 },
+    { "file": "AgentAnalysis.dc.html", "title": "Screen 2 — Agent Analysis (hero)", "x": 1560, "y": 0, "w": 1440, "h": 1000 },
+    { "file": "Decision.dc.html", "title": "Screen 3 — HydroMind Decision", "x": 3120, "y": 0, "w": 1440, "h": 1000 },
+    { "file": "Brief.dc.html", "title": "Build Brief", "x": 0, "y": 1220, "w": 1100, "h": 1900, "print": "flow" }
+  ],
+  "annotations": [
+    { "id": "note-flow", "x": 1560, "y": -230, "w": 340, "text": "Hero screen — build this first.\nThe conflict must read from across the room.\nIf a sprint runs long, shrink the supporting-agent row, never the collision." },
+    { "id": "note-honesty", "x": 0, "y": -230, "w": 340, "text": "SIMULATED FARM STATE stays visible.\nThree readings are outside target — pH is in range and only monitors." },
+    { "id": "note-nofab", "x": 3120, "y": -230, "w": 340, "text": "No measured latency, no post-action readings.\nSteps 4-5 stay conditional. Design targets only." },
+    { "id": "note-lang", "x": 1250, "y": 1220, "w": 320, "text": "Each screen has a Show Arabic toggle above it.\nTurn it off to preview the English-only fallback if the build runs short." }
+  ],
+  "launch": { "view": "canvas" }
+}

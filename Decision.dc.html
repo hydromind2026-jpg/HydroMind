@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+    a { color: #4FB08A; } a:hover { color: #6FC7A4; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; height: 1000px; background: #0B1110; color: #E6EDEA; display: flex; flex-direction: column; padding: 40px 56px; box-sizing: border-box; gap: 22px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;">
+    <div style="display: flex; align-items: baseline; gap: 16px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 600; letter-spacing: 0.1em; color: #E6EDEA;">HYDROMIND DECISION</span>
+      <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 20px; font-weight: 500; color: #8FA39B;">قرار HydroMind</span>
+    </div>
+    <div style="display: inline-flex; align-items: center; gap: 10px; padding: 7px 13px; border-radius: 3px; border: 1px dashed #3A4A44;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8FA39B;">SIMULATED FARM STATE</span>
+      <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 13px; color: #8FA39B;">حالة مزرعة محاكاة</span>
+    </div>
+  </div>
+
+  <div style="background: #0F1A16; border: 2px solid rgba(79,176,138,0.55); border-radius: 6px; padding: 34px 40px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="display: flex; align-items: baseline; gap: 18px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.2em; color: #4FB08A;">ONE COORDINATED DECISION</span>
+      <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 17px; color: #4FB08A; opacity: 0.88;">قرار واحد منسّق</span>
+    </div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 78px; font-weight: 600; line-height: 1; color: #E6EDEA;">ADD 21 L ONCE</span>
+        <span dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 34px; font-weight: 600; color: #B9CFC6;">إضافة 21 لتر مرة واحدة</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; padding-bottom: 8px;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #6F847C;">RESERVOIR · الخزان</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #E6EDEA;">62 L → ≈ 83 L</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #6F847C;">ESTIMATED EC · EC المتوقع</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 24px; color: #E6EDEA;">2.41 → ≈ 1.80 mS/cm</span>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 14px; flex-wrap: wrap; border-top: 1px solid rgba(79,176,138,0.22); padding-top: 20px;">
+      <div style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 3px; background: rgba(79,176,138,0.10); border: 1px solid rgba(79,176,138,0.34);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #6F847C;">PARALLEL</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; color: #4FB08A;">CHILLER ON</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; color: #4FB08A; opacity: 0.85;">تشغيل المبرّد</span>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 3px; background: rgba(217,162,95,0.10); border: 1px solid rgba(217,162,95,0.34);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; color: #D9A25F;">HOLD CHEMICAL DOSING UNTIL MIXING COMPLETES</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; color: #D9A25F; opacity: 0.85;">إيقاف الجرعات حتى اكتمال المزج</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 22px; flex-grow: 1;">
+
+    <div style="flex: 1 1 0; background: #121A18; border: 1px solid #223029; border-radius: 5px; padding: 26px 30px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.18em; color: #8FA39B;">WHY</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; color: #8FA39B;">لماذا اتخذ HydroMind هذا القرار</span>
+      </div>
+      <p style="margin: 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 18px; line-height: 1.55; color: #C9DBD3; text-wrap: pretty;">The low reservoir and the high EC are not two independent problems requiring two separate water actions. They share the same physical resource. HydroMind merges the requests into one refill/dilution action, then delays chemical dosing until the new volume has mixed and the system is measured again.</p>
+      <p dir="rtl" style="display: {{ar}}; margin: 0; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 17px; line-height: 1.7; color: #96ADA4; border-top: 1px solid #1C2724; padding-top: 14px;">انخفاض الخزان وارتفاع EC ليسا مشكلتين منفصلتين تحتاجان إجراءين للمياه. كلاهما يتعلق بنفس المورد. يدمج HydroMind الطلبين في إجراء تعبئة/تخفيف واحد، ثم يؤجّل أي جرعة كيميائية حتى يمتزج الحجم الجديد وتُعاد القياسات.</p>
+    </div>
+
+    <div style="flex: 0 0 420px; background: #121A18; border: 1px solid #223029; border-radius: 5px; padding: 26px 30px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: baseline; gap: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.18em; color: #8FA39B;">EXECUTION</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; color: #8FA39B;">تسلسل التنفيذ</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <span style="flex: 0 0 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(79,176,138,0.5); color: #4FB08A; font-family: 'IBM Plex Mono', monospace; font-size: 14px; display: flex; align-items: center; justify-content: center;">1</span>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #E6EDEA;">Chiller ON</span>
+            <span dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #8FA39B;">تشغيل المبرّد</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <span style="flex: 0 0 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(79,176,138,0.5); color: #4FB08A; font-family: 'IBM Plex Mono', monospace; font-size: 14px; display: flex; align-items: center; justify-content: center;">2</span>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #E6EDEA;">Add 21 L</span>
+            <span dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #8FA39B;">إضافة 21 لتر</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <span style="flex: 0 0 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(79,176,138,0.5); color: #4FB08A; font-family: 'IBM Plex Mono', monospace; font-size: 14px; display: flex; align-items: center; justify-content: center;">3</span>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #E6EDEA;">Mix</span>
+            <span dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #8FA39B;">مزج</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px; opacity: 0.72;">
+          <span style="flex: 0 0 30px; height: 30px; border-radius: 50%; border: 1px dashed #4A5B54; color: #8FA39B; font-family: 'IBM Plex Mono', monospace; font-size: 14px; display: flex; align-items: center; justify-content: center;">4</span>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #C9DBD3;">Re-measure</span>
+            <span dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #8FA39B;">إعادة القياس</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px; opacity: 0.72;">
+          <span style="flex: 0 0 30px; height: 30px; border-radius: 50%; border: 1px dashed #4A5B54; color: #8FA39B; font-family: 'IBM Plex Mono', monospace; font-size: 14px; display: flex; align-items: center; justify-content: center;">5</span>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #C9DBD3;">Dose only if required</span>
+            <span dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #8FA39B;">جرعة عند الحاجة فقط</span>
+          </div>
+        </div>
+
+      </div>
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #1C2724; padding-top: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6F847C;">Steps 4–5 conditional · pending re-measurement</span>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #6F847C; border: 1px solid #2E3A34; border-radius: 3px; padding: 4px 9px;">ReservoirAgent · MERGED</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #6F847C; border: 1px solid #2E3A34; border-radius: 3px; padding: 4px 9px;">pHControllerAgent · DEFERRED</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display: flex; gap: 22px; align-items: stretch;">
+    <div style="flex: 0 0 auto; display: flex; flex-direction: column; gap: 6px; padding: 16px 20px; border: 1px solid #1C2724; border-radius: 4px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #5E7269;">ARBITRATION RULE · قاعدة الأولويات</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #8FA39B;">Safety &gt; Crop Health &gt; Resource Efficiency &gt; Optimisation</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5E7269;">Resolution: shared-resource merge + process sequencing · Mode: NORMAL</span>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5E7269;">Capstone design target: &lt; 10 ms fast-path arbitration · corr-7f3a91c4</span>
+    </div>
+    <div style="flex: 1 1 0; display: flex; flex-direction: column; justify-content: center; gap: 7px; padding: 16px 24px; background: #0F1A16; border: 1px solid rgba(79,176,138,0.28); border-radius: 4px;">
+      <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 22px; font-weight: 600; color: #E6EDEA;">Same sensors. Same actuators. The difference is coordination.</span>
+      <span dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 20px; font-weight: 500; color: #4FB08A;">نفس الحساسات. نفس المشغّلات. الفرق هو التنسيق.</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"showArabic":{"editor":"boolean","default":true,"section":"Language"},"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const on = this.props.showArabic ?? true;
+    return { ar: on ? 'block' : 'none', arIn: on ? 'inline' : 'none' };
+  }
+}
+</script>
+</body>
+</html>

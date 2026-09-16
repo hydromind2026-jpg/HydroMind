@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+    a { color: #4FB08A; } a:hover { color: #6FC7A4; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; height: 1000px; background: #0B1110; color: #E6EDEA; display: flex; flex-direction: column; padding: 52px 56px; box-sizing: border-box; gap: 34px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; border-bottom: 1px solid #1C2724; padding-bottom: 26px;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div style="display: flex; align-items: baseline; gap: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; letter-spacing: 0.1em; color: #E6EDEA;">MISHKAT FARM · JEDDAH</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 22px; font-weight: 500; color: #8FA39B;">مزرعة مشكاة — جدة</span>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.08em; color: #6F847C;">4-ZONE NFT · 100 L RESERVOIR · FARM STATUS</div>
+      <div dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; color: #6F847C;">حالة المزرعة</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
+      <div style="display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px; border-radius: 3px; background: rgba(79,176,138,0.10); border: 1px solid rgba(79,176,138,0.30);">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #4FB08A;"></span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.12em; color: #4FB08A;">MODE: NORMAL</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #4FB08A; opacity: 0.85;">طبيعي</span>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 3px; border: 1px dashed #3A4A44;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8FA39B;">SIMULATED FARM STATE</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 13px; color: #8FA39B;">حالة مزرعة محاكاة</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; flex-grow: 1;">
+
+    <div style="background: #121A18; border: 1px solid #223029; border-radius: 5px; padding: 32px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="display: flex; flex-direction: column; gap: 5px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #8FA39B;">pH</div>
+        <div dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; color: #6F847C;">الحموضة</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 12px; margin-top: auto;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 68px; font-weight: 600; line-height: 1; color: #E6EDEA;">6.42</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4FB08A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 9px 15px; border-radius: 3px; background: rgba(79,176,138,0.12); border: 1px solid rgba(79,176,138,0.34);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.1em; color: #4FB08A;">IN RANGE</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #4FB08A; opacity: 0.85;">ضمن النطاق</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px solid #1C2724; padding-top: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6F847C;">TARGET 5.5 – 6.5</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: #6F847C;">Upward trend · monitoring</span>
+      </div>
+    </div>
+
+    <div style="background: #121A18; border: 1px solid #2E2A20; border-radius: 5px; padding: 32px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="display: flex; flex-direction: column; gap: 5px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #8FA39B;">EC</div>
+        <div dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; color: #6F847C;">التوصيلية</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 10px; margin-top: auto;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 68px; font-weight: 600; line-height: 1; color: #E6EDEA;">2.41</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: #8FA39B;">mS/cm</span>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 9px 15px; border-radius: 3px; background: rgba(217,162,95,0.14); border: 1px solid rgba(217,162,95,0.38);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.1em; color: #D9A25F;">HIGH</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #D9A25F; opacity: 0.85;">مرتفع</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px solid #1C2724; padding-top: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6F847C;">TARGET 1.80 ± 0.10</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: #6F847C;">Dilution requested</span>
+      </div>
+    </div>
+
+    <div style="background: #121A18; border: 1px solid #2E2A20; border-radius: 5px; padding: 32px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="display: flex; flex-direction: column; gap: 5px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #8FA39B;">WATER LEVEL</div>
+        <div dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; color: #6F847C;">مستوى المياه</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 10px; margin-top: auto;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 68px; font-weight: 600; line-height: 1; color: #E6EDEA;">62</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; color: #8FA39B;">%</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 18px; color: #6F847C; margin-left: 4px;">62.0 L</span>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 9px 15px; border-radius: 3px; background: rgba(217,162,95,0.14); border: 1px solid rgba(217,162,95,0.38);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.1em; color: #D9A25F;">LOW</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #D9A25F; opacity: 0.85;">منخفض</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px solid #1C2724; padding-top: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6F847C;">TARGET 70 – 90 %</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: #6F847C;">Refill requested</span>
+      </div>
+    </div>
+
+    <div style="background: #121A18; border: 1px solid #2E2A20; border-radius: 5px; padding: 32px; display: flex; flex-direction: column; gap: 18px;">
+      <div style="display: flex; flex-direction: column; gap: 5px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.16em; color: #8FA39B;">WATER TEMP</div>
+        <div dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; color: #6F847C;">حرارة الماء</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 8px; margin-top: auto;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 68px; font-weight: 600; line-height: 1; color: #E6EDEA;">24.6</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; color: #8FA39B;">°C</span>
+      </div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 9px 15px; border-radius: 3px; background: rgba(217,162,95,0.14); border: 1px solid rgba(217,162,95,0.38);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.1em; color: #D9A25F;">HIGH</span>
+        <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 14px; color: #D9A25F; opacity: 0.85;">مرتفع</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px solid #1C2724; padding-top: 14px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6F847C;">TARGET 18 – 22 °C</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: #6F847C;">Chiller action</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 40px; border-top: 1px solid #1C2724; padding-top: 26px;">
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 17px; letter-spacing: 0.04em; color: #E6EDEA;">6 agents responded · 1 cross-system conflict detected</div>
+      <div dir="rtl" style="display: {{ar}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; color: #8FA39B;">6 وكلاء استجابوا · تعارض واحد بين الأنظمة</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; color: #5E7269;">INCIDENT corr-7f3a91c4</div>
+    </div>
+    <div style="display: inline-flex; align-items: center; gap: 16px; padding: 18px 28px; border-radius: 4px; background: rgba(79,176,138,0.10); border: 1px solid rgba(79,176,138,0.42);">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px; letter-spacing: 0.1em; color: #4FB08A;">VIEW AGENT DECISIONS</span>
+      <span dir="rtl" style="display: {{arIn}}; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 16px; color: #4FB08A; opacity: 0.85;">عرض قرارات الوكلاء</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4FB08A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"showArabic":{"editor":"boolean","default":true,"section":"Language"},"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const on = this.props.showArabic ?? true;
+    return { ar: on ? 'block' : 'none', arIn: on ? 'inline' : 'none' };
+  }
+}
+</script>
+</body>
+</html>

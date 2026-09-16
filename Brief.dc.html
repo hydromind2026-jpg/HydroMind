@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+    a { color: #4FB08A; } a:hover { color: #6FC7A4; }
+  </style>
+</helmet>
+
+<div style="width: 1100px; background: #0B1110; color: #E6EDEA; display: flex; flex-direction: column; padding: 56px 60px; box-sizing: border-box; gap: 36px;">
+
+  <div style="display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid #1C2724; padding-bottom: 28px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.2em; color: #4FB08A;">BUILD BRIEF · DAY 3 · 45 MINUTES</span>
+    <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 40px; font-weight: 700; line-height: 1.15; color: #E6EDEA;">HydroMind is the coordination and decision layer between farm intelligence and farm actions.</span>
+    <span dir="rtl" style="font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 24px; font-weight: 500; color: #8FA39B;">HydroMind هو طبقة التنسيق واتخاذ القرار بين ذكاء المزرعة وإجراءات المزرعة.</span>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; color: #6F847C;">CORE STORY</span>
+    <p style="margin: 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 21px; line-height: 1.5; color: #C9DBD3; text-wrap: pretty;">Separate systems can make locally correct decisions that conflict at the farm level. HydroMind coordinates them into one system-level decision and explains why.</p>
+    <p dir="rtl" style="margin: 0; font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 19px; line-height: 1.7; color: #96ADA4;">الأنظمة المنفصلة قد تتخذ قرارات صحيحة محليًا لكنها تتعارض على مستوى المزرعة. HydroMind ينسّقها في قرار واحد على مستوى النظام، ويشرح السبب.</p>
+  </div>
+
+  <div style="background: #121A18; border-left: 2px solid #4FB08A; padding: 24px 28px; display: flex; flex-direction: column; gap: 10px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; color: #4FB08A;">PROTOTYPE HYPOTHESIS</span>
+    <p style="margin: 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 19px; line-height: 1.5; color: #C9DBD3; text-wrap: pretty;">When an operator sees two individually reasonable requests create a system-level conflict, they should understand the value of a coordination layer without first needing an explanation of multi-agent AI.</p>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; color: #6F847C;">THE SCENARIO — MISHKAT FARM, JEDDAH</span>
+    <p style="margin: 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; line-height: 1.55; color: #8FA39B;">Four-zone NFT rig, shared 100 L reservoir, butterhead lettuce, hot afternoon. A realistic operating scenario built from the farm's operating ranges — not a recorded historical event.</p>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px;">
+      <div style="display: flex; flex-direction: column; gap: 6px; padding: 16px; background: #121A18; border: 1px solid #223029; border-radius: 4px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6F847C;">pH</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; color: #E6EDEA;">6.42</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #4FB08A;">IN RANGE</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5E7269;">5.5 – 6.5</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding: 16px; background: #121A18; border: 1px solid #2E2A20; border-radius: 4px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6F847C;">EC</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; color: #E6EDEA;">2.41</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #D9A25F;">HIGH</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5E7269;">1.80 ± 0.10</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding: 16px; background: #121A18; border: 1px solid #2E2A20; border-radius: 4px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6F847C;">LEVEL</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; color: #E6EDEA;">62 %</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #D9A25F;">LOW</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5E7269;">70 – 90 %</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding: 16px; background: #121A18; border: 1px solid #2E2A20; border-radius: 4px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6F847C;">TEMP</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; color: #E6EDEA;">24.6</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #D9A25F;">HIGH</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5E7269;">18 – 22 °C</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding: 16px; background: #121A18; border: 1px solid #223029; border-radius: 4px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6F847C;">MODE</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; color: #4FB08A;">NORMAL</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6F847C;">NO BOUND</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5E7269;">CROSSED</span>
+      </div>
+    </div>
+    <p style="margin: 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; line-height: 1.55; color: #C9DBD3;"><strong style="color: #E6EDEA;">Three readings are outside their operating targets. pH is not one of them.</strong> Say it that way.</p>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 28px; background: #121A18; border: 1px solid #223029; border-radius: 5px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; color: #6F847C;">DILUTION ESTIMATE — AN APPROXIMATION, NOT MASS CONSERVATION</span>
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 19px; line-height: 1.7; color: #E6EDEA;">C&#8321;V&#8321; &#8776; C&#8322;V&#8322;<br>2.41 &#215; 62 &#8776; 1.80 &#215; V&#8322;<br>V&#8322; &#8776; 83.0 L &#8594; fresh water &#8776; 21.0 L</div>
+    <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.55; color: #8FA39B;">Assumes temperature-compensated EC and approximately linear dilution. Float/overflow cutoff is 95 %, not 100 %. At 95 L the same estimate gives EC &#8776; 1.57 — illustrative only, never presented as measured.</span>
+  </div>
+
+  <div style="display: flex; gap: 22px;">
+    <div style="flex: 1 1 0; display: flex; flex-direction: column; gap: 12px; padding: 24px; background: #0F1A16; border: 1px solid rgba(79,176,138,0.3); border-radius: 5px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.16em; color: #4FB08A;">IN SCOPE</span>
+      <div style="display: flex; flex-direction: column; gap: 8px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #C9DBD3;">
+        <span>One scenario, hard-coded, internally consistent simulated values</span>
+        <span>Four variables: pH, EC, water level, water temperature</span>
+        <span>Six active agents with observation, request, status</span>
+        <span>6 active + 6 idle + Orchestrator active = 13 agents</span>
+        <span>One Orchestrator resolution: shared-resource merge + sequencing</span>
+      </div>
+    </div>
+    <div style="flex: 1 1 0; display: flex; flex-direction: column; gap: 12px; padding: 24px; background: #16110C; border: 1px solid rgba(217,162,95,0.3); border-radius: 5px;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.16em; color: #D9A25F;">OUT — DO NOT BUILD, DO NOT PROMISE</span>
+      <div style="display: flex; flex-direction: column; gap: 8px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #C9DBD3;">
+        <span>Any connection to real sensors or hardware</span>
+        <span>The full 13-agent system running</span>
+        <span>Any learning, training, prediction, or ML model</span>
+        <span>Live data, accounts, settings, multi-farm support</span>
+        <span>More than three screens</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; color: #6F847C;">HONESTY RULES — NON-NEGOTIABLE</span>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; gap: 14px; align-items: flex-start; padding-bottom: 10px; border-bottom: 1px solid #1C2724;">
+        <span style="flex: 0 0 200px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A25F;">SIMULATED MARKER</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #C9DBD3;">Screen 1 always shows SIMULATED FARM STATE · حالة مزرعة محاكاة</span>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; padding-bottom: 10px; border-bottom: 1px solid #1C2724;">
+        <span style="flex: 0 0 200px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A25F;">NO MEASURED LATENCY</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #C9DBD3;">Only "capstone design target: &lt; 10 ms fast-path arbitration"</span>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; padding-bottom: 10px; border-bottom: 1px solid #1C2724;">
+        <span style="flex: 0 0 200px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A25F;">NO POST-ACTION READINGS</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #C9DBD3;">Steps 4–5 are conditional and pending. No fabricated outcomes or time-to-stable.</span>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start; padding-bottom: 10px; border-bottom: 1px solid #1C2724;">
+        <span style="flex: 0 0 200px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A25F;">ACTUATOR OWNERSHIP</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #C9DBD3;">ECController <em>requests</em> dilution. ReservoirAgent owns the refill action.</span>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <span style="flex: 0 0 200px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A25F;">NO PRE-EMPTIVE DOSING</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #C9DBD3;">pH 6.42 is in range → MONITOR. The architecture requires confirmed out-of-range readings.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; color: #6F847C;">BILINGUAL RULE</span>
+    <div style="display: flex; flex-direction: column; gap: 8px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.5; color: #C9DBD3;">
+      <span><strong style="color: #E6EDEA;">Arabic carries the narrative</strong> — decision, reason, status words.</span>
+      <span><strong style="color: #E6EDEA;">English carries the identifiers</strong> — pH, EC, mS/cm, agent names, field names.</span>
+      <span><strong style="color: #E6EDEA;">Western digits in both</strong> — 6.42, 2.41, 62 %, 21 L. No conversion risk.</span>
+      <span style="color: #8FA39B;">Cut order under time pressure: Arabic stays on screen 1 chips and the screen 3 decision. Keep all Arabic strings in one place so this is one edit, not a rewrite.</span>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #1C2724; padding-top: 28px;">
+    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; color: #6F847C;">SUCCESS — W1 CARD, SECTION ٦</span>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.45; color: #C9DBD3;">
+      <span>1 · Analyse a realistic farm problem</span>
+      <span>2 · Show several agents' decisions</span>
+      <span>3 · Resolve the conflict between them</span>
+      <span>4 · Issue one clear final decision via the Orchestrator</span>
+    </div>
+    <p style="margin: 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.5; color: #8FA39B;">The moment these four can be demonstrated end to end — stop building and rehearse. Never cut: the hero conflict, the decision line in both languages, the arbitration rule, the SIMULATED marker.</p>
+  </div>
+
+  <div style="display: flex; gap: 30px; border-top: 1px solid #1C2724; padding-top: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #5E7269;">
+    <span>AMRO — BUILD + PRESENT</span>
+    <span>LAYAN — SCENARIO, CONTENT, ARABIC, VERIFICATION + PRESENT</span>
+    <span>corr-7f3a91c4</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
